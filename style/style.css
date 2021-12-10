@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+/* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
+
+:root {
+  --light-grey-bg: hsl(0, 0%, 98%);
+  --dark-blue-light-mode-font: hsl(200, 15%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--light-grey-bg);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  color: var(--dark-blue-light-mode-font);
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 2em 1.3em;
+  margin-bottom: 3em;
+  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
+}
+
+#nav-header {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+#theme-switcher {
+  border: white;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#theme-switcher i {
+  padding-right: 5px;
+}
+
+/* Filtering */
+#search-container {
+  display: flex;
+  margin: 1.7em 1em;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: white;
+}
+
+input {
+  background: white;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
+  width: 100%;
+  padding: 1em;
+}
+
+::placeholder {
+  font-size: 11px;
+  color: hsl(0, 0%, 52%);
+  letter-spacing: 0.4px;
+}
+
+#dropdown-container {
+  margin: 1em;
+}
+
+#dropdown-btn {
+  display: flex;
+  align-items: center;
+  border: white;
+  border-radius: 5px;
+  padding: 1.2em 1.5em;
+  font-size: 11px;
+  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
+  background: white;
+  cursor: pointer;
+}
+
+#dropdown-btn i {
+  font-size: 80%;
+  margin-left: 80px;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  width: 175px;
+  margin-top: 3px;
+  padding: 0.6em 1em;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dropdown-item {
+  padding: 6px;
+}
+
+.dropdown-item:hover {
+  background: hsl(0, 0%, 92%);
+  transition: all 0.2s;
+}
+
+#loading {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 1.5em 1em;
+}
+
+/* country cards */
+.countries-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  padding: 3em;
+}
+
+.country-card {
+  background: white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
+}
+
+.country-card img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  margin: 25px 23px;
+  padding-bottom: 40px;
+}
+
+.country-card h2 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.country-card span {
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+  nav {
+    padding: 2em 2.8em;
+  }
+
+  .filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1.8em;
+  }
+}
+
+@media (min-width: 640px) {
+  nav {
+    margin-bottom: 1em;
+  }
+
+  .countries-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1em 3em;
+  }
+}
+
+@media (min-width: 768px) {
+  #nav-header {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 770px) {
+  .countries-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2em;
+    gap: 1.5em;
+  }
+}
+
+@media (min-width: 990px) {
+  .countries-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.5em;
+    padding: 2em 3.2em;
+  }
+}
