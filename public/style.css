@@ -29,6 +29,8 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   background: white;
   padding: 2em 1.3em;
   margin-bottom: 3em;
@@ -164,6 +166,45 @@ input {
 
 .country-card span {
   font-weight: 400;
+}
+
+/* individual country modal */
+#modal-close {
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  padding: 0.5em 2em;
+  margin: 3em 1.5em;
+  box-shadow: 0 0 10px 1px hsla(0, 0%, 70%, 0.548);
+  background: white;
+  border: white;
+  border-radius: 5px;
+}
+
+#modal-close i {
+  padding-right: 7px;
+}
+
+#modal-container {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  top: 8.5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-grey-bg);
+}
+
+#modal {
+  border: solid;
+  padding: 1em;
+}
+
+#modal img {
+  width: 100%;
 }
 
 /* media queries */

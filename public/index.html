@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -43,14 +43,20 @@
         </div>
       </div>
     </div>
+    <!-- Individual country modal -->
+    <div id="modal-container">
+      <div>
+        <button id="modal-close"><i class="fas fa-arrow-left"></i> Back</button>
+      </div>
+      <div id="modal"></div>
+    </div>
     <!-- Country cards -->
     <section>
       <div class="countries-container" id="countries-container">
         <h2 id="loading">Fetching countries...</h2>
       </div>
     </section>
-
     <!-- JS -->
-    <script src="./js/index.js" async defer></script>
+    <script src="script.js" async defer></script>
   </body>
 </html>
