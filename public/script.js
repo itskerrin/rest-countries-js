@@ -60,8 +60,10 @@ function openModal(country) {
     <div class="country">
           <img src=${country.flag} alt=${country.name} />
         </div>
-        <div class="card-content">
-            <h2 class="modal-title">${country.name}</h2>
+        <div class="card-content-modal">
+            <h2 class="country-title" id="country-modal-name">${
+              country.name
+            }</h2>
             <h3 class="modal-title">Population: <span>${country.population.toLocaleString()}</span></h3>
             <h3 class="modal-title">Region: <span>${country.region}</span></h3>
             <h3 class="modal-title">Sub Region: <span>
@@ -70,7 +72,7 @@ function openModal(country) {
             <h3 class="modal-title">Capital: <span>
             ${country.capital}
             </span></span></h3>
-            
+            </div>
             <div id="modal-flex">
             <h3 class="modal-title">Top Level Domain: <span>${
               country.topLevelDomain[0]
@@ -82,17 +84,8 @@ function openModal(country) {
             ${country.languages.map((language) => ' ' + language.name)}
             </span></span></h3>
             </div>
-            <div>
-              <h2 id="border-title">Border Countries</h2>
-              <div class="border-countries">
-              ${country.borders.map((border) => `<span>${border}</span>`)}
-              </div>
-            </div>
-        </div>
   `;
 }
-
-// Display border countries (modal)
 
 // Close modal
 closeBtn.addEventListener('click', () => {
