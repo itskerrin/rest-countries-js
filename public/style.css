@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-/* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
-- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
-- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
-- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
-- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
-- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
-
 :root {
+  /* light mode */
   --light-grey-bg: hsl(0, 0%, 98%);
   --dark-blue-light-mode-font: hsl(200, 15%, 8%);
+  /* dark mode */
+  --dark-blue-dark-mode-el: hsl(209, 23%, 22%);
+  --v-dark-blue-dark-mode-bg: hsl(207, 26%, 17%);
 }
 
 * {
@@ -223,7 +220,7 @@ input {
   margin: 1.5em 0;
 }
 
-/* media queries */
+/* tablet - desktop */
 
 @media (min-width: 600px) {
   nav {
@@ -239,10 +236,13 @@ input {
 
   #modal {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 4em;
   }
 
   #modal img {
+    width: 90%;
     margin-top: 4em;
   }
 
@@ -271,8 +271,8 @@ input {
     font-size: 15px;
   }
 
-  #modal {
-    padding-left: 5em;
+  #modal-flex {
+    padding: 0 20px;
   }
 }
 
@@ -286,9 +286,6 @@ input {
   #modal {
     padding-left: 5em;
   }
-}
-
-@media (min-width: 960px) {
 }
 
 @media (min-width: 990px) {

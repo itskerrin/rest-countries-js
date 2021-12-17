@@ -5,7 +5,35 @@ const countriesContainer = document.getElementById('countries-container');
 const searchbarInput = document.querySelector('input');
 const countryModal = document.getElementById('modal-container');
 const closeBtn = document.getElementById('modal-close');
-const borderCountries = document.getElementById('border-countries');
+const darkModeBtn = document.getElementById('theme-switcher');
+const countryCard = document.querySelectorAll('.country-card');
+const nav = document.querySelector('nav');
+
+searchbarInput;
+dropdownBtn;
+dropdownContent;
+
+// Dark mode
+darkModeBtn.addEventListener('click', () => {
+  let lightBg = 'var(--light-grey-bg)';
+  let lightFont = 'var(--dark-blue-light-mode-font)';
+  let darkBg = 'var(--v-dark-blue-dark-mode-bg)';
+  let darkEl = 'var(--dark-blue-dark-mode-el)';
+  // background
+  document.body.style.background !== darkBg
+    ? (document.body.style.background = darkBg)
+    : (document.body.style.background = lightBg);
+  // input and dropdown
+
+  // font
+  document.body.style.color !== 'white'
+    ? (document.body.style.color = 'white')
+    : (document.body.style.color = lightFont);
+  // nav
+  nav.style.background !== darkEl
+    ? (nav.style.background = darkEl)
+    : (nav.style.background = 'white');
+});
 
 // Drop down regions
 dropdownBtn.addEventListener('click', () => {
