@@ -13,28 +13,6 @@ searchbarInput;
 dropdownBtn;
 dropdownContent;
 
-// Dark mode
-darkModeBtn.addEventListener('click', () => {
-  let lightBg = 'var(--light-grey-bg)';
-  let lightFont = 'var(--dark-blue-light-mode-font)';
-  let darkBg = 'var(--v-dark-blue-dark-mode-bg)';
-  let darkEl = 'var(--dark-blue-dark-mode-el)';
-  // background
-  document.body.style.background !== darkBg
-    ? (document.body.style.background = darkBg)
-    : (document.body.style.background = lightBg);
-  // input and dropdown
-
-  // font
-  document.body.style.color !== 'white'
-    ? (document.body.style.color = 'white')
-    : (document.body.style.color = lightFont);
-  // nav
-  nav.style.background !== darkEl
-    ? (nav.style.background = darkEl)
-    : (nav.style.background = 'white');
-});
-
 // Drop down regions
 dropdownBtn.addEventListener('click', () => {
   dropdownContent.style.display === 'none' ||
