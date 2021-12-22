@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
-  /* light mode */
-  --light-grey-bg: hsl(0, 0%, 98%);
-  --dark-blue-light-mode-font: hsl(200, 15%, 8%);
-  /* dark mode */
-  --dark-blue-dark-mode-el: hsl(209, 23%, 22%);
-  --v-dark-blue-dark-mode-bg: hsl(207, 26%, 17%);
+  --background: hsl(0, 0%, 98%);
+  --font-color: hsl(200, 15%, 8%);
+  --element-bg: hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 100%);
+  --box-shadow-color: hsl(0, 0%, 92%);
+  --placeholder: hsl(0, 0%, 52%);
+}
+
+.dark-mode {
+  --background: hsl(207, 26%, 17%);
+  --font-color: hsl(0, 0%, 100%);
+  --element-bg: hsl(209, 23%, 22%);
+  --white: hsl(0, 0%, 100%);
+  --box-shadow-color: hsl(208, 21%, 16%);
+  --placeholder: hsl(0, 0%, 100%);
 }
 
 * {
@@ -16,10 +25,10 @@
 
 body {
   box-sizing: border-box;
-  background: var(--light-grey-bg);
+  background: var(--background);
   font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
-  color: var(--dark-blue-light-mode-font);
+  color: var(--font-color);
 }
 
 /* Nav */
@@ -28,10 +37,10 @@ nav {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background: white;
+  background: var(--element-bg);
   padding: 2em 1.3em;
   margin-bottom: 3em;
-  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
+  box-shadow: 0 0 10px 1px var(--box-shadow-color);
 }
 
 #nav-header {
@@ -41,8 +50,9 @@ nav {
 }
 
 #theme-switcher {
-  border: white;
-  background: white;
+  border: var(--element-bg);
+  background: var(--element-bg);
+  color: var(--font-color);
   font-size: 13px;
   cursor: pointer;
 }
@@ -63,22 +73,23 @@ label {
   padding: 0 15px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  background: white;
+  background: var(--element-bg);
 }
 
 input {
-  background: white;
+  background: var(--element-bg);
+  color: var(--font-color);
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
+  box-shadow: 0 0 10px 1px var(--box-shadow-color);
   width: 100%;
   padding: 1em;
 }
 
 ::placeholder {
   font-size: 11px;
-  color: hsl(0, 0%, 52%);
+  color: var(--placeholder);
   letter-spacing: 0.4px;
 }
 
@@ -89,12 +100,13 @@ input {
 #dropdown-btn {
   display: flex;
   align-items: center;
-  border: white;
+  border: var(--element-bg);
   border-radius: 5px;
   padding: 1.2em 1.5em;
   font-size: 11px;
-  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
-  background: white;
+  box-shadow: 0 0 10px 1px var(--box-shadow-color);
+  background: var(--element-bg);
+  color: var(--font-color);
   cursor: pointer;
 }
 
@@ -106,7 +118,7 @@ input {
 #dropdown-content {
   display: none;
   position: absolute;
-  background: white;
+  background: var(--element-bg);
   border-radius: 5px;
   width: 175px;
   margin-top: 3px;
@@ -120,7 +132,7 @@ input {
 }
 
 .dropdown-item:hover {
-  background: hsl(0, 0%, 92%);
+  background: var(--box-shadow-color);
   transition: all 0.2s;
 }
 
@@ -139,10 +151,10 @@ input {
 }
 
 .country-card {
-  background: white;
+  background: var(--element-bg);
   box-sizing: border-box;
   border-radius: 8px;
-  box-shadow: 0 0 10px 1px hsl(0, 0%, 92%);
+  box-shadow: 0 0 10px 1px var(--box-shadow-color);
 }
 
 .country-card img {
@@ -172,9 +184,10 @@ input {
   font-size: 14px;
   padding: 0.5em 2em;
   margin: 3em 1.5em;
-  box-shadow: 0 0 10px 1px hsla(0, 0%, 70%, 0.548);
-  background: white;
-  border: white;
+  box-shadow: 0 0 10px 1px var(--box-shadow-color);
+  color: var(--font-color);
+  background: var(--element-bg);
+  border: var(--element-bg);
   border-radius: 5px;
 }
 
@@ -190,7 +203,7 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--light-grey-bg);
+  background-color: var(--background);
 }
 
 #modal {

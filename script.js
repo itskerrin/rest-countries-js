@@ -9,9 +9,14 @@ const darkModeBtn = document.getElementById('theme-switcher');
 const countryCard = document.querySelectorAll('.country-card');
 const nav = document.querySelector('nav');
 
-searchbarInput;
-dropdownBtn;
-dropdownContent;
+// Dark mode
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  document.body.classList.contains('dark-mode')
+    ? (darkModeBtn.innerHTML = '<i class="far fa-lightbulb"></i>Light Mode')
+    : (darkModeBtn.innerHTML = '<i class="far fa-moon"></i>Dark Mode');
+});
 
 // Drop down regions
 dropdownBtn.addEventListener('click', () => {
